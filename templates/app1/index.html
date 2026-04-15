@@ -6,7 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello User!</h1>
-    
+    {% for odam in odamlar %}
+        <h1>{{ odam.ism }} {{odam.familya}}</h1>
+        {% if odam.yosh > 14 %}
+            <p>Siz qarib qopsiz</p>
+        {% else %}
+        <p>Siz chaqaloq ekansz</p>
+        {% endif %}
+    {% endfor %}
 </body>
 </html>     
