@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends "app1/base.html" %}
+
+{% block content %}
+    {% include "app1/navbar.html"%}
     {% for odam in odamlar %}
         <h1>{{ odam.ism }} {{odam.familya}}</h1>
         {% if odam.yosh > 14 %}
@@ -14,5 +10,5 @@
         <p>Siz chaqaloq ekansz</p>
         {% endif %}
     {% endfor %}
-</body>
-</html>     
+    
+{% endblock %}
