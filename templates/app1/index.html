@@ -3,12 +3,6 @@
 {% block content %}
     {% include "app1/navbar.html"%}
     {% for odam in odamlar %}
-        <h1>{{ odam.ism }} {{odam.familya}}</h1>
-        {% if odam.yosh > 14 %}
-            <p>Siz qarib qopsiz</p>
-        {% else %}
-        <p>Siz chaqaloq ekansz</p>
-        {% endif %}
-    {% endfor %}
-    
+        <a href="{% url 'user_view' odam.id %}"><h1>{{ odam.ism }} {{odam.familya}}</h1></a>
+    {% endfor %} 
 {% endblock %}
