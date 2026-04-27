@@ -3,6 +3,6 @@
 {% block content %}
     {% include "app1/navbar.html"%}
     {% for odam in odamlar %}
-        <a href="{% url 'user_view' odam.id %}"><h1>{{ odam.ism }} {{odam.familya}}</h1></a>
+        <a href="{% url 'user_view' odam.slug %}"><h1>{{ odam.ism }} {{odam.familya}}</h1></a>
     {% endfor %} 
 {% endblock %}
